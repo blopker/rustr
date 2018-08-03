@@ -27,7 +27,3 @@ fn calculate_length(s: &str) -> usize {
 fn append_bo(s: &mut String) {
     s.push_str("BO")
 }
-
-fn first_word(s: &str) -> &str {
-    
-}

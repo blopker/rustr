@@ -17,3 +17,11 @@ path = "src/bin/three.rs"
 [[bin]]
 name = "four"
 path = "src/bin/four.rs"
+
+[[bin]]
+name = "five"
+path = "src/bin/five.rs"
+
+[[bin]]
+name = "rectangle"
+path = "src/bin/rectangle.rs"
