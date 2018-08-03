@@ -1,0 +1,19 @@
+[package]
+name = "rustr"
+version = "0.1.0"
+authors = ["Bo Lopker <blopker@23andme.com>"]
+
+[dependencies]
+rand = "0.5.4"
+
+[[bin]]
+name = "guess"
+path = "src/bin/guess.rs"
+
+[[bin]]
+name = "three"
+path = "src/bin/three.rs"
+
+[[bin]]
+name = "four"
+path = "src/bin/four.rs"
