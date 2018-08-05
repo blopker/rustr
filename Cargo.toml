@@ -25,3 +25,11 @@ path = "src/bin/five.rs"
 [[bin]]
 name = "rectangle"
 path = "src/bin/rectangle.rs"
+
+[[bin]]
+name = "enum"
+path = "src/bin/enum.rs"
+
+[[bin]]
+name = "match"
+path = "src/bin/match.rs"
