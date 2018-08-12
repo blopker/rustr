@@ -1,0 +1,1 @@
+/Users/blopker/code/rustr/comunicator/target/debug/communicator.dSYM: /Users/blopker/code/rustr/comunicator/src/client.rs /Users/blopker/code/rustr/comunicator/src/lib.rs /Users/blopker/code/rustr/comunicator/src/main.rs /Users/blopker/code/rustr/comunicator/src/network/mod.rs /Users/blopker/code/rustr/comunicator/src/network/server.rs

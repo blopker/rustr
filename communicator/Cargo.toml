@@ -1,0 +1,6 @@
+[package]
+name = "communicator"
+version = "0.1.0"
+authors = ["Bo Lopker <blopker@23andme.com>"]
+
+[dependencies]

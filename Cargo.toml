@@ -5,6 +5,7 @@ authors = ["Bo Lopker <blopker@23andme.com>"]
 
 [dependencies]
 rand = "0.5.4"
+communicator = { path = "../communicator" }
 
 [[bin]]
 name = "guess"
@@ -33,3 +34,19 @@ path = "src/bin/enum.rs"
 [[bin]]
 name = "match"
 path = "src/bin/match.rs"
+
+[[bin]]
+name = "modules"
+path = "src/bin/modules.rs"
+
+[[bin]]
+name = "collections"
+path = "src/bin/collections.rs"
+
+[[bin]]
+name = "strings"
+path = "src/bin/strings.rs"
+
+[[bin]]
+name = "hash"
+path = "src/bin/hash.rs"
