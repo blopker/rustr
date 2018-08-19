@@ -50,3 +50,23 @@ path = "src/bin/strings.rs"
 [[bin]]
 name = "hash"
 path = "src/bin/hash.rs"
+
+[[bin]]
+name = "eight"
+path = "src/bin/eight.rs"
+
+[[bin]]
+name = "errors"
+path = "src/bin/errors.rs"
+
+[[bin]]
+name = "generics"
+path = "src/bin/generics.rs"
+
+[[bin]]
+name = "traits"
+path = "src/bin/traits.rs"
+
+[[bin]]
+name = "lifetime"
+path = "src/bin/lifetime.rs"

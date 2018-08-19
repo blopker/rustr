@@ -21,5 +21,5 @@ fn main() {
     for c in "नमस्ते".chars() {
         println!("{}", c);
     }
-    println!("{}", "नमस्ते".chars()[2]) //Strings Are Not So Simple
+    println!("{}", "नमस्ते".chars().next().expect("hi")) //Strings Are Not So Simple
 }
