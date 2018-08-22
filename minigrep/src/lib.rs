@@ -42,22 +42,20 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 }
 
 fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let results: Vec<&str> = Vec::from_iter(
+    Vec::from_iter(
         contents.lines().filter(|x| {
             x.contains(query)
         })
-    );
-    results
+    )
 }
 
 fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let query = query.to_lowercase();
-    let results: Vec<&str> = Vec::from_iter(
+    Vec::from_iter(
         contents.lines().filter(|x| {
             x.to_lowercase().contains(&query)
         })
-    );
-    results
+    )
 }
 
 #[cfg(test)]
