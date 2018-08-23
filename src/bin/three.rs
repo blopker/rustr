@@ -54,9 +54,13 @@ fn expressions(y: u32, z: u32) -> u32 {
 }
 
 fn loops() {
+    let mut a = 0;
     loop {
         println!("looop");
-        break;
+        a += 1;
+        if a == 3 {
+            break;
+        }
     }
     let mut x = 0;
     while x < 2 {
@@ -65,7 +69,7 @@ fn loops() {
     }
 
     let a = [1, 2, 3, 4];
-    for i in a.iter() {
+    for i in &a {
         println!("array {}", i);
     }
 
@@ -74,7 +78,7 @@ fn loops() {
     }
 }
 
-fn fib(n: usize, mut cache: &mut HashMap<usize, usize>) -> usize {
+fn fib(n: usize, cache: &mut HashMap<usize, usize>) -> usize {
     let answer = match cache.get(&n) {
         Some(&x) => x,
         None => {

@@ -1,6 +1,5 @@
 use std::error::Error;
 use std::fs;
-use std::iter::FromIterator;
 use std::env;
 
 #[derive(Debug)]
@@ -26,7 +25,7 @@ impl Config {
     }
 }
 
-pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(&config.path)?;
     if config.case_sensitive {
         for line in search(&config.query, &contents) {
@@ -42,20 +41,16 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 }
 
 fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    Vec::from_iter(
-        contents.lines().filter(|x| {
-            x.contains(query)
-        })
-    )
+    contents.lines()
+        .filter(|x| x.contains(query))
+        .collect()
 }
 
 fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let query = query.to_lowercase();
-    Vec::from_iter(
-        contents.lines().filter(|x| {
-            x.to_lowercase().contains(&query)
-        })
-    )
+    contents.lines()
+        .filter(|x| x.to_lowercase().contains(&query))
+        .collect()
 }
 
 #[cfg(test)]

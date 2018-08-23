@@ -12,7 +12,7 @@ fn main() {
 
 fn vec_fail() {
     let v = vec![1, 3, 4];
-    v[100];
+    let a = v[100];
 }
 
 fn file_fail() {
@@ -36,8 +36,8 @@ fn read_username_from_file(path: &str) -> Result<String, io::Error> {
     };
     let mut s = String::new();
     match f.read_to_string(&mut s) {
-        Ok(_) => return Ok(s),
-        Err(e) => return Err(e),
+        Ok(_) => Ok(s),
+        Err(e) => Err(e),
     }
 }
 
